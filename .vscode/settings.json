@@ -1,0 +1,89 @@
+{
+    "editor.formatOnSave": true,
+    "editor.tabSize": 8,
+    "editor.rulers": [
+        100
+    ],
+    "files.associations": {
+        "*.repos": "yaml",
+        "*.world": "xml",
+        "*.xacro": "xml"
+    },
+    "python.analysis.extraPaths": [
+        "/opt/ros/humble/lib/python3.10/site-packages/"
+    ],
+    // Autocomplete from ros python packages
+    "python.autoComplete.extraPaths": [
+        "/opt/ros/humble/lib/python3.10/site-packages/",
+        "${workspaceFolder}/src/",
+        "${workspaceFolder}/install/lib/python3.10/site-packages/"
+    ],
+    // Use the system installed version of autopep8
+    "python.formatting.autopep8Path": "/usr/bin/autopep8",
+    "python.formatting.autopep8Args": [
+        "--max-line-length=100"
+    ],
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "clangd.arguments": [
+        "--completion-style=detailed",
+        "--clang-tidy"
+    ],
+    "clang-format.assumeFilename": "/opt/ros/humble/lib/python3.10/site-packages/ament_clang_format/configuration/.clang-format",
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "[cmake]": {
+        "editor.defaultFormatter": "cheshirekow.cmake-format"
+    },
+    "files.exclude": {
+        "**/node_modules": true,
+        "build/": true,
+        "install/": true,
+        ".cache*/": true,
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/*.code-search": true,
+        "**/build": true,
+        "**/install": true,
+        "**/log": true
+    },
+    "cSpell.words": [
+        "athackst",
+        "autopep",
+        "clangd",
+        "cmake",
+        "cppcheck",
+        "cpplint",
+        "DCMAKE",
+        "deque",
+        "devcontainer",
+        "ints",
+        "noqa",
+        "pytest",
+        "rclcpp",
+        "rclpy",
+        "repos",
+        "rosdep",
+        "rosdistro",
+        "rosidl",
+        "RTPS",
+        "uncrustify",
+        "Wextra",
+        "Wpedantic",
+        "xmllint"
+    ],
+    "cSpell.allowCompoundWords": true,
+    "cSpell.ignorePaths": [
+        "**/package-lock.json",
+        "**/node_modules/**",
+        "**/vscode-extension/**",
+        "**/.git/objects/**",
+        ".vscode",
+        ".vscode-insiders",
+        ".devcontainer/devcontainer.json"
+    ],
+    "ament-task-provider.envSetup": "source /opt/ros/humble/setup.bash",
+    "git.repositoryScanMaxDepth": 2
+}

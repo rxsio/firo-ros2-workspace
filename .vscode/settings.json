@@ -88,5 +88,6 @@
     "git.ignoredRepositories": [
         "."
     ],
-    "git.repositoryScanMaxDepth": 2
+    "git.repositoryScanMaxDepth": 2,
+    "clangd.path": "/usr/bin/clangd"
 }

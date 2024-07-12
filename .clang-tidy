@@ -1,0 +1,94 @@
+# Modified version from: https://github.com/cpp-best-practices/cmake_template
+---
+Checks: "*,
+  -abseil-*,
+  -altera-*,
+  -android-*,
+  -fuchsia-*,
+  -google-*,
+  -llvm*,
+  -modernize-use-trailing-return-type,
+  -zircon-*,
+  -readability-else-after-return,
+  -readability-static-accessed-through-instance,
+  -readability-avoid-const-params-in-decls,
+  -cppcoreguidelines-non-private-member-variables-in-classes,
+  -misc-non-private-member-variables-in-classes"
+WarningsAsErrors: ""
+HeaderFilterRegex: ""
+FormatStyle: none
+
+CheckOptions:
+  - key: readability-identifier-length.IgnoredVariableNames
+    value: "x|y|z"
+  - key: readability-identifier-length.IgnoredParameterNames
+    value: "x|y|z"
+
+  ############################################
+  # Naming conventions
+  ############################################
+
+  # Based on guidelines from https://wiki.ros.org/CppStyleGuide
+  # Generic keys are used that together cover all of the
+  # recognizable identifiers and are sufficient to follow ROS guidelines
+  # To derive which keys are generic, following example was used:
+  # https://gist.github.com/KazNX/693761f2ee7881c120d209f04084e98a
+
+  # Constants
+  - key: readability-identifier-naming.ClassConstantCase
+    value: "CamelCase"
+  - key: readability-identifier-naming.ClassConstantPrefix
+    value: "k"
+  - key: readability-identifier-naming.GlobalConstantCase
+    value: "CamelCase"
+  - key: readability-identifier-naming.GlobalConstantPrefix
+    value: "k"
+  - key: readability-identifier-naming.GlobalConstantPointerCase
+    value: "CamelCase"
+  - key: readability-identifier-naming.GlobalConstantPointerPrefix
+    value: "k"
+  - key: readability-identifier-naming.EnumConstantCase
+    value: "CamelCase"
+  - key: readability-identifier-naming.EnumConstantPrefix
+    value: "k"
+  - key: readability-identifier-naming.ConstexprVariableCase
+    value: CamelCase
+  - key: readability-identifier-naming.ConstexprVariablePrefix
+    value: k
+  # Functions
+  - key: readability-identifier-naming.FunctionCase
+    value: "CamelCase"
+  # Macros
+  - key: readability-identifier-naming.MacroDefinitionCase
+    value: "UPPER_CASE"
+  # Namespaces
+  - key: readability-identifier-naming.NamespaceCase
+    value: "lower_case"
+  # Types
+  - key: readability-identifier-naming.ClassCase
+    value: "CamelCase"
+  - key: readability-identifier-naming.EnumCase
+    value: "CamelCase"
+  - key: readability-identifier-naming.TemplateParameterCase
+    value: "CamelCase"
+  - key: readability-identifier-naming.TypeAliasCase
+    value: "CamelCase"
+  - key: readability-identifier-naming.TypedefCase
+    value: "CamelCase"
+  - key: readability-identifier-naming.UnionCase
+    value: "CamelCase"
+  # Variables
+  - key: readability-identifier-naming.GlobalVariableCase
+    value: "lower_case"
+  - key: readability-identifier-naming.GlobalVariablePrefix
+    value: "g_"
+  - key: readability-identifier-naming.LocalConstantPointerCase
+    value: "lower_case"
+  - key: readability-identifier-naming.MemberCase
+    value: "lower_case"
+  - key: readability-identifier-naming.ClassMemberSuffix
+    value: "_"
+  - key: readability-identifier-naming.ParameterCase
+    value: "lower_case"
+  - key: readability-identifier-naming.VariableCase
+    value: "lower_case"

@@ -13,7 +13,12 @@ Checks: "*,
   -readability-static-accessed-through-instance,
   -readability-avoid-const-params-in-decls,
   -cppcoreguidelines-non-private-member-variables-in-classes,
-  -misc-non-private-member-variables-in-classes"
+  -misc-non-private-member-variables-in-classes,
+  -bugprone-easily-swappable-parameters"
+# The bugprone-easily-swappable-parameters check is useful, but it often triggers when users define
+# overload methods according to an external library API, which is beyond their control.
+# Moreover, without named parameters in C++, solving this problem in some cases is challenging.
+
 WarningsAsErrors: ""
 HeaderFilterRegex: ""
 FormatStyle: none

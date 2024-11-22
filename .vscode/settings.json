@@ -55,6 +55,7 @@
         "clangd",
         "cmake",
         "cppcheck",
+        "cppcoreguidelines",
         "cpplint",
         "DCMAKE",
         "deque",
@@ -89,5 +90,6 @@
         "."
     ],
     "git.repositoryScanMaxDepth": 2,
-    "clangd.path": "/usr/bin/clangd"
+    "clangd.path": "/usr/bin/clangd",
+    "extensions.ignoreRecommendations": true
 }

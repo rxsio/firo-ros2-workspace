@@ -30,7 +30,10 @@ CheckOptions:
     value: "x|y|z"
   - key: readability-identifier-length.IgnoredParameterNames
     value: "x|y|z"
-
+  - key: readability-magic-numbers.IgnorePowersOf2IntegerValues
+    value: "true"
+  - key: cppcoreguidelines-avoid-magic-numbers.IgnorePowersOf2IntegerValues
+    value: "true"
   ############################################
   # Naming conventions
   ############################################
@@ -40,6 +43,13 @@ CheckOptions:
   # recognizable identifiers and are sufficient to follow ROS guidelines
   # To derive which keys are generic, following example was used:
   # https://gist.github.com/KazNX/693761f2ee7881c120d209f04084e98a
+
+  # Those rules are not perfectly following naming conventions, as they
+  # cannot handle corner cases. However, enforcing consistency is much
+  # better than hoping for user to do it himself.
+  # For example, lambda expressions and other callables assigned to
+  # variables will be matched with snake_case (as all variables),
+  # while CamelCase (as all functions) would me much more intuitive
 
   # Constants
   - key: readability-identifier-naming.ClassConstantCase
@@ -58,13 +68,14 @@ CheckOptions:
     value: "CamelCase"
   - key: readability-identifier-naming.EnumConstantPrefix
     value: "k"
-  - key: readability-identifier-naming.ConstexprVariableCase
-    value: CamelCase
-  - key: readability-identifier-naming.ConstexprVariablePrefix
-    value: k
+
   # Functions
   - key: readability-identifier-naming.FunctionCase
     value: "CamelCase"
+  - key: readability-identifier-naming.ConstexprFunctionCase
+    value: "CamelCase"
+  - key: readability-identifier-naming.ConstexprFunctionPrefix
+    value: ""
   # Macros
   - key: readability-identifier-naming.MacroDefinitionCase
     value: "UPPER_CASE"
